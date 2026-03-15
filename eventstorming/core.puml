@@ -3,6 +3,7 @@
 
 !global $EVENT_BG_COLOR?="Orange"
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
+!global $SYSTEM_BG_COLOR?="Pink" 
 
 left to right direction 
 
@@ -31,4 +32,12 @@ skinparam rectangle<<DomainEvent>> {
 
 skinparam rectangle<<Command>> {
   BackgroundColor $COMMAND_BG_COLOR
+}
+
+!procedure System($id, $name="", $originId="" )
+  ESCard($id, System, $name, $originId)
+!endprocedure 
+
+skinparam rectangle<<System>> {
+  BackgroundColor $SYSTEM_BG_COLOR
 }
