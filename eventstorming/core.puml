@@ -4,8 +4,11 @@
 !global $EVENT_BG_COLOR?="Orange"
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
 
-!procedure Event($id, $name="")
+!procedure Event($id, $name="", $originCommandId="")
   Card($id, rectangle, DomainEvent, $name)
+  !if ($originCommandId != "")
+    $originCommandId --> $id
+  !endif
 !endprocedure
 
 skinparam rectangle<<DomainEvent>> {
