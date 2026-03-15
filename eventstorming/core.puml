@@ -4,6 +4,7 @@
 !global $EVENT_BG_COLOR?="Orange"
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
 !global $SYSTEM_BG_COLOR?="Pink" 
+!global $AGGREGATE_BG_COLOR?="Light goldenrod yellow" 
 
 left to right direction 
 
@@ -40,4 +41,12 @@ skinparam rectangle<<Command>> {
 
 skinparam rectangle<<System>> {
   BackgroundColor $SYSTEM_BG_COLOR
+}
+
+!procedure Aggregate($id, $name="", $originId="" )
+  ESCard($id, Aggregate, $name, $originId)
+!endprocedure 
+
+skinparam rectangle<<Aggregate>> {
+  BackgroundColor $AGGREGATE_BG_COLOR
 }
