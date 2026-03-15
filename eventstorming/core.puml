@@ -5,6 +5,7 @@
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
 !global $SYSTEM_BG_COLOR?="Pink" 
 !global $AGGREGATE_BG_COLOR?="Light goldenrod yellow" 
+!global $ACTOR_BG_COLOR?="Gold" 
 
 left to right direction 
 
@@ -49,4 +50,12 @@ skinparam rectangle<<System>> {
 
 skinparam rectangle<<Aggregate>> {
   BackgroundColor $AGGREGATE_BG_COLOR
+}
+
+!procedure Actor($id, $name="", $originId="" )
+  ESCard($id, Actor, $name, $originId)
+!endprocedure 
+
+skinparam rectangle<<Actor>> {
+  BackgroundColor $ACTOR_BG_COLOR
 }
