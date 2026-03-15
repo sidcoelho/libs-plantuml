@@ -4,6 +4,8 @@
 !global $EVENT_BG_COLOR?="Orange"
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
 
+left to right direction 
+
 !procedure Event($id, $name="", $originCommandId="")
   Card($id, rectangle, DomainEvent, $name)
   !if ($originCommandId != "")
