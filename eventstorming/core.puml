@@ -4,10 +4,10 @@
 !global $EVENT_BG_COLOR?="Orange"
 !global $COMMAND_BG_COLOR?="MediumTurquoise"
 !global $SYSTEM_BG_COLOR?="Pink" 
-!global $AGGREGATE_BG_COLOR?="Light goldenrod yellow" 
+!global $AGGREGATE_BG_COLOR?="LightGoldenRodYellow" 
 !global $ACTOR_BG_COLOR?="Gold" 
-!global $POLICY_BG_COLOR?="Medium purple" 
-!global $READ_MODEL_BG_COLOR?=*Yellow green"
+!global $POLICY_BG_COLOR?="MediumPurple" 
+!global $READ_MODEL_BG_COLOR?="YellowGreen"
 
 left to right direction 
 
