@@ -1,11 +1,14 @@
 !$LIB_BASE?="https://raw.githubusercontent.com/sidneydemoraes/libs-plantuml/main"
 !include $LIB_BASE/common.puml
 
-!global $USER_BG_COLOR?="PowderBlue"
-!global $ACTIVITY_BG_COLOR?="Orange"
-!global $STEP_BG_COLOR?="MediumBlue"
-!global $STORY_BG_COLOR?="Gold"
+!global $EVENT_BG_COLOR?="Orange"
+!global $COMMAND_BG_COLOR?="MediumTurquoise"
 
-!procedure User($id, $name="")
-  Card($id, Rectangle, User, $name)
+!procedure Event($id, $name="")
+  Card($id, Rectangle, Event, $name)
 !endprocedure
+
+skinparam rectangle<<Event>> {
+  BackgroundColor $EVENT_BG_COLOR
+  FontColor $FONT_COLOR
+}
