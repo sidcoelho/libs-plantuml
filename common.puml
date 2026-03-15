@@ -33,8 +33,6 @@
   !endif
   $shape $id <<$stereotype>> as "$name" [
     <<$stereotype>>
-
-
     $name
   ]
 !endprocedure
