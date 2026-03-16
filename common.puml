@@ -44,7 +44,7 @@
   !endif
 
   center footer
-    <size:$FONT_SIZE_SM><color:red>WARNING</color> <color:$LIGHT_FONT_COLOR>this sketch required validation.</color></size>
+    <size:$FONT_SIZE_SM><color:red>WARNING</color>: <color:$LIGHT_FONT_COLOR>this sketch requires validation.</color></size>
     <size:$FONT_SIZE_SM><color:$LIGHT_FONT_COLOR>Do not use for production.</color></size>
   end footer
 !endprocedure
