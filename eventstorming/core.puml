@@ -20,14 +20,15 @@ skinparam rectangle {
   !if ($originId != "")
     !$dir = %lower($connDirection)
 
+    ' Directions must be corrected due to left to right direction option
     !if ($dir == "up" || $dir == "u")
-      $originId -up-> $id
-    !elseif ($dir == "down" || $dir == "d")
-      $originId -down-> $id
-    !elseif ($dir == "left" || $dir == "l")
       $originId -left-> $id
-    !elseif ($dir == "right" || $dir == "r")
+    !elseif ($dir == "down" || $dir == "d")
       $originId -right-> $id
+    !elseif ($dir == "left" || $dir == "l")
+      $originId -down-> $id
+    !elseif ($dir == "right" || $dir == "r")
+      $originId -up-> $id
     !else
       $originId --> $id
     !endif
