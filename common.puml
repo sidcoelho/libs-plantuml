@@ -1,6 +1,6 @@
 ' Configure layout
 !global $FONT_COLOR?="#3b3b3b"
-!global $LIGHT_FONT_COLOR?="LightGrey"
+!global $LIGHT_FONT_COLOR?="Grey"
 !global $FONT_SIZE_XS?=10
 !global $FONT_SIZE_SM?=12
 !global $FONT_SIZE_MD?=16
