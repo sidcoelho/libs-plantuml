@@ -17,8 +17,20 @@ skinparam rectangle {
 
 !unquoted procedure ESCard($id, $stereotype, $name="", $originId="", $connDirection="")
   Card($id, rectangle, $stereotype, $name)
-  !if ($originId != "")
-    $originId -$connDirection--> $id
+  !if ($originId == "")
+    !$dir = %lower($connDirection)
+
+    !if ($dir == "up" || $dir == "u")
+      $originId -up-> $id
+    !elseif ($dir == "down" || $dir == "d")
+      $originId -down-> $id
+    !elseif ($dir == "left" || $dir == "l")
+      $originId -left-> $id
+    !elseif ($dir == "right" || $dir == "r")
+      $originId -right-> $id
+    !else
+      $originId --> $id
+    !endif
   !endif
 !endprocedure
 
