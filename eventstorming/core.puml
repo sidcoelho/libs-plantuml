@@ -15,63 +15,63 @@ skinparam rectangle {
   FontColor $FONT_COLOR
 }
 
-!unquoted procedure ESCard($id, $stereotype, $name="", $originId="")
+!unquoted procedure ESCard($id, $stereotype, $name="", $originId="", $connDirection="")
   Card($id, rectangle, $stereotype, $name)
   !if ($originId != "")
-    $originId --> $id
+    $originId -$connDirection-> $id
   !endif
 !endprocedure
 
-!procedure Event($id, $name="", $originId="")
-  ESCard($id, DomainEvent, $name, $originId)
+!procedure Event($id, $name="", $originId="", $connDirection="")
+  ESCard($id, DomainEvent, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<DomainEvent>> {
   BackgroundColor $EVENT_BG_COLOR
 }
 
-!procedure Command($id, $name="", $originId="" )
-  ESCard($id, Command, $name, $originId)
+!procedure Command($id, $name="", $originId="", $connDirection="")
+  ESCard($id, Command, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<Command>> {
   BackgroundColor $COMMAND_BG_COLOR
 }
 
-!procedure System($id, $name="", $originId="" )
-  ESCard($id, System, $name, $originId)
+!procedure System($id, $name="", $originId="", $connDirection="")
+  ESCard($id, System, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<System>> {
   BackgroundColor $SYSTEM_BG_COLOR
 }
 
-!procedure Aggregate($id, $name="", $originId="" )
-  ESCard($id, Aggregate, $name, $originId)
+!procedure Aggregate($id, $name="", $originId="", $connDirection="")
+  ESCard($id, Aggregate, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<Aggregate>> {
   BackgroundColor $AGGREGATE_BG_COLOR
 }
 
-!procedure Actor($id, $name="", $originId="" )
-  ESCard($id, Actor, $name, $originId)
+!procedure Actor($id, $name="", $originId="", $connDirection="")
+  ESCard($id, Actor, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<Actor>> {
   BackgroundColor $ACTOR_BG_COLOR
 }
 
-!procedure Policy($id, $name="", $originId="" )
-  ESCard($id, Policy, $name, $originId)
+!procedure Policy($id, $name="", $originId="", $connDirection="")
+  ESCard($id, Policy, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<Policy>> {
   BackgroundColor $POLICY_BG_COLOR
 }
 
-!procedure ReadModel($id, $name="", $originId="" )
-  ESCard($id, ReadModel, $name, $originId)
+!procedure ReadModel($id, $name="", $originId="", $connDirection="")
+  ESCard($id, ReadModel, $name, $originId, $connDirection="")
 !endprocedure
 
 skinparam rectangle<<ReadModel>> {
