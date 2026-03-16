@@ -22,9 +22,9 @@ skinparam rectangle {
 
     ' Directions must be corrected due to left to right direction option
     !if ($dir == "up" || $dir == "u")
-      $originId -right-> $id
-    !elseif ($dir == "down" || $dir == "d")
       $originId -left-> $id
+    !elseif ($dir == "down" || $dir == "d")
+      $originId -right-> $id
     !elseif ($dir == "left" || $dir == "l")
       $originId -up-> $id
     !elseif ($dir == "right" || $dir == "r")
