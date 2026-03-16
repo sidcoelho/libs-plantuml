@@ -14,10 +14,10 @@
     <color:$FONT_COLOR><size:$FONT_SIZE_M><i>$subtitle</i></size></color>
   !endif
   !if ($version)
-    <color:$FONT_COLOR><size:$FONT_SIZE_SM>"Version: " + $version</size></color>
+    <color:$FONT_COLOR><size:$FONT_SIZE_SM>Version: $version</size></color>
   !endif
   !if ($date)
-    <color:$FONT_COLOR><size:$FONT_SIZE_SM>"Last modified: " + $date</size></color>
+    <color:$FONT_COLOR><size:$FONT_SIZE_SM>Last modified: $date</size></color>
   !endif
   end title
 !endprocedure
