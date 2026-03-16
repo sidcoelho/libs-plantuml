@@ -1,5 +1,6 @@
 ' Configure layout
 !global $FONT_COLOR?="#3b3b3b"
+!global $LIGHT_FONT_COLOR?="DarkGrey"
 !global $FONT_SIZE_XS?=10
 !global $FONT_SIZE_SM?=12
 !global $FONT_SIZE_MD?=16
@@ -11,13 +12,13 @@
   title
   <color:$FONT_COLOR><size:$FONT_SIZE_LG>$title</size></color>
   !if ($subtitle)
-    <color:$FONT_COLOR><size:$FONT_SIZE_MD><i>$subtitle</i></size></color>
+    <color:$LIGHT_FONT_COLOR><size:$FONT_SIZE_MD><i>$subtitle</i></size></color>
   !endif
   !if ($version)
-    <color:$FONT_COLOR><size:$FONT_SIZE_SM>Version: $version</size></color>
+    <color:$LIGHT_FONT_COLOR><size:$FONT_SIZE_SM>Version: $version</size></color>
   !endif
   !if ($date)
-    <color:$FONT_COLOR><size:$FONT_SIZE_SM>Last modified: $date</size></color>
+    <color:$LIGHT_FONT_COLOR><size:$FONT_SIZE_SM>Last modified: $date</size></color>
   !endif
   end title
 !endprocedure
